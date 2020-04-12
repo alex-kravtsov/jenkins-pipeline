@@ -13,6 +13,12 @@ pipeline {
                 sh './vendor/bin/phpunit'
             }
         }
+        stage('deploy') {
+            when { branch 'master' }
+            steps {
+                sh 'php src/main.php'
+            }
+        }
     }
     post {
         always {
