@@ -1,0 +1,9 @@
+{
+    "name": "alex-kravtsov/jenkins-pipeline",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "HelloWorld\\": "lib/"
+        }
+    }
+}
