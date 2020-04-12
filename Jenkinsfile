@@ -7,6 +7,12 @@ pipeline {
                 sh 'composer install'
             }
         }
+        stage('test') {
+            when { branch 'master' }
+            steps {
+                sh './vendor/bin/phpunit'
+            }
+        }
     }
     post {
         always {
